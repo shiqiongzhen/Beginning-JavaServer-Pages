@@ -1,0 +1,40 @@
+   <%@ page contentType="text/html;charset=UTF-8" %>
+    <el-container style="height: 100vh; border: 1px solid #eee;">
+        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+            <el-menu :default-openeds="['1','2','3']" router>
+                <el-submenu index="1">
+                    <template slot="title"><i class="el-icon-message"></i>用户管理</template>
+                    <el-menu-item-group>
+                        <el-menu-item index="1-1">用户列表</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
+                <el-submenu index="2">
+                    <template slot="title"><i class="el-icon-menu"></i>产品管理</template>
+                    <el-menu-item-group>
+                        <el-menu-item index="2-1">产品列表</el-menu-item>
+                        <el-menu-item index="2-2">产品分类</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
+                <el-submenu index="3">
+                    <template slot="title"><i class="el-icon-setting"></i>订单管理</template>
+                    <el-menu-item-group>
+                        <el-menu-item index="3-1">订单列表</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
+            </el-menu>
+        </el-aside>
+
+        <el-container>
+            <el-header style="text-align: right; font-size: 12px;background: pink;">
+                <el-dropdown>
+                    <i class="el-icon-setting" style="margin-right: 15px"></i>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item>查看</el-dropdown-item>
+                        <el-dropdown-item>新增</el-dropdown-item>
+                        <el-dropdown-item>删除</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+                <span>王小虎</span>
+            </el-header>
+
+            <el-main>
