@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 21/05/2019 10:52:53
+ Date: 21/05/2019 11:59:15
 */
 
 SET NAMES utf8mb4;
@@ -23,7 +23,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `mobileclassify`;
 CREATE TABLE `mobileclassify`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` char(255) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci DEFAULT NULL,
+  `name` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = gb2312 COLLATE = gb2312_chinese_ci ROW_FORMAT = Fixed;
 
@@ -47,12 +47,12 @@ INSERT INTO `mobileclassify` VALUES (13, '魅族手机');
 -- ----------------------------
 DROP TABLE IF EXISTS `mobileform`;
 CREATE TABLE `mobileform`  (
-  `mobile_version` char(255) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci DEFAULT NULL,
-  `mobile_name` char(255) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NOT NULL,
-  `mobile_made` varchar(255) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci DEFAULT NULL,
+  `mobile_version` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `mobile_name` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `mobile_made` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `mobile_price` float(8, 2) DEFAULT NULL,
-  `mobile_mess` char(255) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci DEFAULT NULL,
-  `mobile_pic` char(255) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci DEFAULT NULL,
+  `mobile_mess` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `mobile_pic` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = gb2312 COLLATE = gb2312_chinese_ci ROW_FORMAT = Dynamic;
@@ -71,8 +71,8 @@ INSERT INTO `mobileform` VALUES ('D7787', '华为手机', '华为公司', 8000.0
 DROP TABLE IF EXISTS `orderform`;
 CREATE TABLE `orderform`  (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `logname` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `mess` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `logname` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `mess` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `sum` float(10, 0) DEFAULT NULL,
   `state` int(255) UNSIGNED ZEROFILL NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -94,11 +94,11 @@ INSERT INTO `orderform` VALUES (8, '123', NULL, NULL, 00000000000000000000000000
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `logname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `phone` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `address` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `realname` char(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `logname` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `password` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `phone` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `address` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `realname` char(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = gb2312 COLLATE = gb2312_chinese_ci ROW_FORMAT = Dynamic;
